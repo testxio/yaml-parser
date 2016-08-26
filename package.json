@@ -1,14 +1,26 @@
 {
-  "name": "yaml-parser",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "name": "testx-yaml-parser",
+  "version": "0.1.0",
+  "description": "Simple YAML file parser for use with the testx library. Converts a YAML file to testx test script (JSON)",
+  "main": "index.coffee",
   "dependencies": {
     "js-yaml": "^3.6.1"
-  }
+  },
+  "devDependencies": {
+    "coffee-script": "^1.10.0"
+  },
+  "scripts": {
+    "test": "node_modules/coffee-script/bin/coffee test/spec.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/testxio/yaml-parser.git"
+  },
+  "keywords": [
+    "yaml",
+    "test",
+    "testx"
+  ],
+  "author": "Greyarch BV",
+  "license": "ISC"
 }

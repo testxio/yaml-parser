@@ -1,21 +1,20 @@
 yaml = require 'js-yaml'
 fs   = require 'fs'
 
+module.exports =
+  parse: (file) ->
+    try
+      doc = yaml.safeLoad(fs.readFileSync(file, 'utf8'))
+      steps = for k, v of doc
+        keyword = k.trim()
+        [all, kwd, _ignore, comment] = keyword.match /^(.*?)(\[(.*)\])?$/
+        name: kwd?.trim() or keyword
+        meta:
+          'Full name': keyword
+          Comment: comment?.trim() or ''
+        arguments: v
 
-
-try
-  doc = yaml.safeLoad(fs.readFileSync('test/test.yaml', 'utf8'))
-  console.log doc
-
-  steps = for k, v of doc
-    name: k
-    meta:
-      'Full name': k
-      Comment: 'get comment here'
-    arguments: v
-
-  console.dir {steps: steps},
-    depth: 5
-    color: true
-catch e
-  console.log e
+      steps: steps
+    catch e
+      console.error  e
+      steps: []
