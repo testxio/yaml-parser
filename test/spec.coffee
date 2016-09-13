@@ -2,6 +2,9 @@ parser = require '..'
 assert = require 'assert'
 
 expected =
+  meta:
+    parser: 'testx-yaml-parser@0.1.0',
+    file: 'test/test.yaml'
   steps: [
      name: 'step 1',
      meta:
@@ -28,6 +31,6 @@ expected =
   ]
 
 script = parser.parse 'test/test.yaml'
-# console.dir script,
-#   depth: 5
+console.dir script,
+  depth: 5
 assert.deepEqual script, expected

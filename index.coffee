@@ -1,5 +1,6 @@
 yaml = require 'js-yaml'
 fs   = require 'fs'
+pkg  = require './package.json'
 
 module.exports =
   parse: (file) ->
@@ -14,3 +15,6 @@ module.exports =
       arguments: v
 
     steps: steps
+    meta:
+      parser: "#{pkg.name}@#{pkg.version}"
+      file: file
