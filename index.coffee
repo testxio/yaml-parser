@@ -1,13 +1,12 @@
 yaml = require 'js-yaml'
 fs   = require 'fs'
-_ = require 'lodash'
 pkg  = require './package.json'
 
 module.exports =
   parse: (file) ->
     doc = yaml.safeLoad(fs.readFileSync(file, 'utf8'))
     steps = for step, row in doc
-      keyword = _.keys(step)[0]
+      keyword = Object.keys(step)[0]
       [all, kwd, _ignore, comment] = keyword.match /^(.*?)(\[(.*)\])?$/
       name: kwd?.trim() or keyword
       meta:

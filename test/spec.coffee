@@ -1,9 +1,10 @@
 parser = require '..'
 assert = require 'assert'
+pkg  = require '../package.json'
 
 expected =
   meta:
-    parser: 'testx-yaml-parser@0.1.0',
+    parser: "#{pkg.name}@#{pkg.version}",
     file: 'test/test.yaml'
   steps: [
      name: 'go to',
