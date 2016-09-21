@@ -6,25 +6,28 @@ expected =
     parser: 'testx-yaml-parser@0.1.0',
     file: 'test/test.yaml'
   steps: [
-     name: 'step 1',
+     name: 'go to',
      meta:
-       'Full name': 'step 1 [with comment]'
+       Row: 1
+       'Full name': 'go to [with comment]'
        Comment: 'with comment'
      arguments:
        'arg 11': 'val 1'
        'arg 12': 'val 2'
   ,
-     name: 'step 2',
+     name: 'set',
      meta:
-       'Full name': 'step 2'
+       Row: 2
+       'Full name': 'set'
        Comment: ''
      arguments:
        'arg 21': 'val 111'
        'arg 22': 'multi\nline\nstring'
   ,
-     name: 'step 3'
+     name: 'set'
      meta:
-       'Full name': 'step 3'
+       Row: 3
+       'Full name': 'set'
        Comment: ''
      arguments:
        'arg 3': 'ooooo'

@@ -1,14 +1,11 @@
-step 1 [with comment]:
-  arg 11: val 1
-  arg 12: val 2
-
-# this is a comment
-step 2:
-  arg 21: val 111
-  arg 22: |-
-    multi
-    line
-    string
-
-step 3:
-  arg 3: ooooo
+- go to [with comment]:
+    arg 11: val 1
+    arg 12: val 2
+- set: # this is a comment
+    arg 21: val 111
+    arg 22: |-
+      multi
+      line
+      string
+- set:
+    arg 3: ooooo
