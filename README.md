@@ -8,7 +8,7 @@ In your test file (*mytests/test.yaml*):
 
 # fill in the search box and press search
 - set:
-    searchBox : sample pdf files
+    searchBox: sample pdf files
 
 - set:
     searchBtn: ''
