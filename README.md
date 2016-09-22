@@ -28,5 +28,5 @@ yamlParser = require 'testx-yaml-parser'
 
 describe 'Some page', ->
   it 'should work in a certain way', ->
-    testx.runScript yamlParser.parse 'mytests/test.yaml'
+    testx.runScript yamlParser.parseFile 'mytests/test.yaml'
 ```

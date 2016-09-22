@@ -34,7 +34,7 @@ expected =
        'arg 3': 'ooooo'
   ]
 
-script = parser.parse 'test/test.yaml'
+script = parser.parseFile 'test/test.yaml'
 console.dir script,
   depth: 5
 assert.deepEqual script, expected

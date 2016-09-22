@@ -3,8 +3,13 @@ fs   = require 'fs'
 pkg  = require './package.json'
 
 module.exports =
-  parse: (file) ->
-    doc = yaml.safeLoad(fs.readFileSync(file, 'utf8'))
+  parseFile: (file) ->
+    script = parse fs.readFileSync(file, 'utf8')
+    script.meta.file = file
+    script
+
+  parse: parse = (content) ->
+    doc = yaml.safeLoad content
     steps = for step, row in doc
       keyword = Object.keys(step)[0]
       [all, kwd, _ignore, comment] = keyword.match /^(.*?)(\[(.*)\])?$/
@@ -18,4 +23,3 @@ module.exports =
     steps: steps
     meta:
       parser: "#{pkg.name}@#{pkg.version}"
-      file: file
