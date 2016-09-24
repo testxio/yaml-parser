@@ -18,16 +18,16 @@ expected =
   ,
      name: 'set',
      meta:
-       Row: 2
+       Row: 4
        'Full name': 'set'
        Comment: ''
      arguments:
        'arg 21': 'val 111'
-       'arg 22': 'multi\nline\nstring'
+       'arg 22': 'multi\n- line\nstring'
   ,
      name: 'set'
      meta:
-       Row: 3
+       Row: 10
        'Full name': 'set'
        Comment: ''
      arguments:
