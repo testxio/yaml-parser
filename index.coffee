@@ -17,14 +17,19 @@ module.exports =
     lines = findKeywordLines content.split '\n'
     doc = yaml.safeLoad content
     steps = for step, row in doc
-      keyword = Object.keys(step)[0]
+      if typeof step is 'object'
+        keyword = Object.keys(step)[0]
+        args = step[keyword]
+      else
+        keyword = step
+        args = []
       [all, kwd, _ignore, comment] = keyword.match /^(.*?)(\[(.*)\])?$/
       name: kwd?.trim() or keyword
       meta:
         'Full name': keyword
         Comment: comment?.trim() or ''
         Row: lines[row]?.line or row
-      arguments: step[keyword]
+      arguments: args
 
     steps: steps
     meta:

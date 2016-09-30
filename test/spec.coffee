@@ -32,6 +32,13 @@ expected =
        Comment: ''
      arguments:
        'arg 3': 'ooooo'
+  ,
+     name: 'no params'
+     meta:
+       Row: 12
+       'Full name': 'no params'
+       Comment: ''
+     arguments: []
   ]
 
 script = parser.parseFile 'test/test.yaml'

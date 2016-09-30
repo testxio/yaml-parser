@@ -1,6 +1,6 @@
 {
   "name": "testx-yaml-parser",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple YAML file parser for use with the testx library. Converts a YAML file to testx test script (JSON)",
   "main": "index.coffee",
   "dependencies": {
