@@ -5,7 +5,7 @@ pkg  = require '../package.json'
 expected =
   meta:
     parser: "#{pkg.name}@#{pkg.version}",
-    file: 'test/test.yaml'
+    file: 'test/test.testx'
   steps: [
      name: 'go to',
      meta:
