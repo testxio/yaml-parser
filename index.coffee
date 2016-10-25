@@ -8,9 +8,13 @@ findKeywordLines = (lines) ->
   line: i + 1 for line, i in lines when line.startsWith '- '
 
 module.exports =
+  name: pkg.name
+  version: pkg.version
+  extensions: ['testx', 'yaml', 'yml']
+
   parseFile: (file) ->
     script = parse fs.readFileSync(file, 'utf8')
-    script.meta.file = file
+    script.source = file: file
     script
 
   parse: parse = (content) ->
@@ -32,5 +36,3 @@ module.exports =
       arguments: args
 
     steps: steps
-    meta:
-      parser: "#{pkg.name}@#{pkg.version}"

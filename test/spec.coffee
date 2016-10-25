@@ -3,8 +3,7 @@ assert = require 'assert'
 pkg  = require '../package.json'
 
 expected =
-  meta:
-    parser: "#{pkg.name}@#{pkg.version}",
+  source:
     file: 'test/test.testx'
   steps: [
      name: 'go to',
