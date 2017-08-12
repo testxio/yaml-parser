@@ -1,6 +1,6 @@
 yaml = require 'js-yaml'
 fs   = require 'fs'
-pkg  = require './package.json'
+pkg  = require '../package.json'
 
 String::startsWith ?= (s) -> @[...s.length] is s
 

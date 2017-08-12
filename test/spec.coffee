@@ -1,6 +1,5 @@
-parser = require '..'
+parser = require '../lib'
 assert = require 'assert'
-pkg  = require '../package.json'
 
 expected =
   source:
