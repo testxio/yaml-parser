@@ -1,6 +1,6 @@
 {
-  "name": "testx-yaml-parser",
-  "version": "2.0.1",
+  "name": "@testx/parser-yaml",
+  "version": "3.0.0",
   "description":
     "Simple YAML file parser for use with the testx library. Converts a YAML file to testx test script (JSON)",
   "main": "lib/index.js",

@@ -1,6 +1,6 @@
 # Usage
 
-In your test file (*mytests/test.yaml*):
+In your test file (_mytests/test.yaml_):
 
 ```YAML
 - go to:
@@ -22,9 +22,9 @@ In your test file (*mytests/test.yaml*):
 
 In your spec file (CoffeeScript):
 
-``` CoffeeScript
+```CoffeeScript
 testx = require 'testx'
-yamlParser = require 'testx-yaml-parser'
+yamlParser = require '@testx/parser-yaml'
 
 describe 'Some page', ->
   it 'should work in a certain way', ->
@@ -33,9 +33,9 @@ describe 'Some page', ->
 
 Alternatively you can pass the YAML as a literal string. In CoffeeScript:
 
-``` CoffeeScript
+```CoffeeScript
 testx = require 'testx'
-yamlParser = require 'testx-yaml-parser'
+yamlParser = require '@testx/parser-yaml'
 
 describe 'Some page', ->
   it 'should work in a certain way', ->
@@ -55,6 +55,6 @@ describe 'Some page', ->
 - check in pdf:
     link: pdfLink
     expect1: D e n t i s t s
-    expect2: P o l i t i c i a n s    
+    expect2: P o l i t i c i a n s
 """
 ```
