@@ -37,9 +37,17 @@ expected =
        'Full name': 'no params'
        Comment: ''
      arguments: []
+  ,
+     name: 'null params'
+     meta:
+       Row: 13
+       'Full name': 'null params'
+       Comment: ''
+     arguments:
+       'null-param': null
   ]
 
 script = parser.parseFile 'test/test.testx'
-console.dir script,
-  depth: 5
+# console.dir script,
+#   depth: 5
 assert.deepEqual script, expected

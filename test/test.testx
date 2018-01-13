@@ -10,3 +10,5 @@
 - set:
     arg 3: ooooo
 - no params
+- null params:
+    null-param:
