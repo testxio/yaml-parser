@@ -4,7 +4,7 @@
   "description": "Simple YAML file parser for use with the testx library. Converts a YAML file to testx test script (JSON)",
   "main": "lib/index.js",
   "dependencies": {
-    "js-yaml": "^3.13.1"
+    "js-yaml": "^4.1.1"
   },
   "devDependencies": {
     "coffee-script": "^1.12.7"
